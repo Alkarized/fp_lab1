@@ -32,5 +32,3 @@
   (is (= (int (find_diff_tail 100)) 25164150))
   (is (= (int (find_diff_tail 2)) 4)))
 
-(run-tests)
-
