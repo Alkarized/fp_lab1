@@ -1,5 +1,5 @@
 (ns task25.inf
-  (:use [task25.fib_seq]))
+  (:require [task25.fib_seq :refer [generate_inf_seq]]))
 
 (defn get_indexed [n]
   (->> (generate_inf_seq 0 1)
