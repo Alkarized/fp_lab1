@@ -1,34 +1,31 @@
-(ns tests)
-(require '[clojure.test :refer [is deftest]])
-(require '[task6.ez-way :refer [find_diff_ez]])
-(require '[task6.inf :refer [find_diff_inf]])
-(require '[task6.map :refer [find_diff_map]])
-(require '[task6.rec :refer [diff_rec]])
-(require '[task6.tail-rec :refer [find_diff_tail]])
+(ns tests
+  (:require [clojure.test :refer [deftest testing is]]
+            [task6.ez-way :refer [find_diff_ez]]
+            [task6.inf :refer [find_diff_inf]]
+            [task6.map :refer [find_diff_map]]
+            [task6.rec :refer [diff_rec]]
+            [task6.tail-rec :refer [find_diff_tail]]
+            ))
 
-(deftest test-ez
-  (is (= 4 (+ 2 2)))
-  (is (= (int (find_diff_ez 100)) 25164150))
-  (is (= (int (find_diff_ez 2)) 4))
-  )
+(def n1 2)
+(def n2 100)
+(def ans1 4)
+(def ans2 25164150)
 
-(deftest test-inf
-  (is (= 4 (+ 2 2)))
-  (is (= (int (find_diff_inf 100)) 25164150))
-  (is (= (int (find_diff_inf 2)) 4)))
-
-(deftest test-map
-  (is (= 4 (+ 2 2)))
-  (is (= (int (find_diff_map 100)) 25164150))
-  (is (= (int (find_diff_map 2)) 4)))
-
-(deftest test-rec
-  (is (= 4 (+ 2 2)))
-  (is (= (int (diff_rec 100)) 25164150))
-  (is (= (int (diff_rec 2)) 4)))
-
-(deftest test-tail
-  (is (= 4 (+ 2 2)))
-  (is (= (int (find_diff_tail 100)) 25164150))
-  (is (= (int (find_diff_tail 2)) 4)))
-
+(deftest testings
+  (testing "ez_way"
+    (is (= ans1 (find_diff_ez n1)))
+    (is (= ans2 (find_diff_ez n2))))
+  (testing "inf"
+    (is (= ans1 (find_diff_inf n1)))
+    (is (= ans2 (find_diff_inf n2))))
+  (testing "map"
+    (is (= ans1 (find_diff_map n1)))
+    (is (= ans2 (find_diff_map n2))))
+  (testing "rec"
+    (is (= ans1 (diff_rec n1)))
+    (is (= ans2 (diff_rec n2))))
+  (testing "tail_rec"
+    (is (= ans1 (find_diff_tail n1)))
+    (is (= ans2 (find_diff_tail n2)))) 
+)
