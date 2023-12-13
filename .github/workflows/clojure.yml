@@ -33,4 +33,4 @@ jobs:
         run: clj-kondo --lint src test
 
       - name: run tests
-        run: clj -X:test
+        run: clojure -X:test
