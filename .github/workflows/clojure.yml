@@ -24,6 +24,7 @@ jobs:
           cli: 1.10.1.693              # Clojure CLI based on tools.deps
           clj-kondo: 2022.05.31        # Clj-kondo
           cljfmt: 0.10.2               # cljfmt
+          lein: 2.9.1                  # Leiningen
 
       - name: clj-fmt fix
         run: cljfmt fix src test
@@ -32,4 +33,4 @@ jobs:
         run: clj-kondo --lint src test
 
       - name: run-tests
-        run: clojure -Mtest
+        run: lein test
