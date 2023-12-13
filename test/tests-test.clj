@@ -1,4 +1,4 @@
-(ns test
+(ns tests-test
   (:require [clojure.test :refer [deftest testing is]]
             [task6.ez-way :refer [find_diff_ez]]
             [task6.inf :refer [find_diff_inf]]
