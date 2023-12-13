@@ -29,8 +29,8 @@ jobs:
       - name: clj-fmt fix
         run: cljfmt fix src test
 
-      - name: clj-kondo checks
+      - name: linter
         run: clj-kondo --lint src test
 
-      - name: run-tests
-        run: lein test tests
+      - name: run tests
+        run: clojure -Mtest
