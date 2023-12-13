@@ -1,5 +1,5 @@
 (ns tests)
-(require '[clojure.test])
+(require '[clojure.test :refer [is deftest]])
 (require '[task6.ez-way :refer [find_diff_ez]])
 (require '[task6.inf :refer [find_diff_inf]])
 (require '[task6.map :refer [find_diff_map]])
