@@ -1,16 +1,16 @@
 (ns task6.inf)
 
 (defn generate_inf_seq [start]
-  (lazy-seq 
-   (cons start  
-    (generate_inf_seq (inc start)))))
+  (lazy-seq
+   (cons start
+         (generate_inf_seq (inc start)))))
 
 (defn sum_of_sqaures [nums]
   (reduce + (map #(* % %) nums)))
 
 (defn squares_sum [nums]
   (let [sum (reduce + nums)]
-     (* sum sum)))
+    (* sum sum)))
 
 (defn find_diff_inf [n]
   (let [nums (take n (generate_inf_seq 1))

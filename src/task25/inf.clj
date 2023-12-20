@@ -8,7 +8,6 @@
        (map-indexed (fn [idx itm] [idx itm]))
        (filter #(== (second %) n))
        first
-       first
-       ))
+       first))
 
 (get_indexed 30)

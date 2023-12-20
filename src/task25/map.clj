@@ -11,10 +11,9 @@
       (let [num (first seq)]
         (if (== (count (str num)) n)
           @index
-          (do 
+          (do
             (swap! index inc)
-            (recur (rest seq)))
-           )))))
+            (recur (rest seq))))))))
 
 
 (fib_search 25)

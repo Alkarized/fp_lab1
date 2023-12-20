@@ -11,9 +11,7 @@
          (map #(count (str %)))
          (map-indexed (fn [idx itm] [idx itm]))
          (filter #(== (second %) n))
-         first 
          first
-         )
-  ))
+         first)))
 
 (get_index 1000)

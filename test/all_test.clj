@@ -4,8 +4,7 @@
             [task6.inf :refer [find_diff_inf]]
             [task6.map :refer [find_diff_map]]
             [task6.rec :refer [diff_rec]]
-            [task6.tail-rec :refer [find_diff_tail]]
-            ))
+            [task6.tail-rec :refer [find_diff_tail]]))
 
 (def n1 2)
 (def n2 100)
@@ -27,5 +26,4 @@
     (is (= ans2 (diff_rec n2))))
   (testing "tail_rec"
     (is (= ans1 (find_diff_tail n1)))
-    (is (= ans2 (find_diff_tail n2)))) 
-)
+    (is (= ans2 (find_diff_tail n2)))))
