@@ -1,6 +1,5 @@
 (ns task6.map)
 
-
 (defn pow2 [x]
   (* x x))
 

@@ -3,7 +3,6 @@
 (defn fibonacci-sequence []
   (map first (iterate (fn [[a b]] [b (+ a b)]) [1 1])))
 
-
 (defn fib_search [n]
   (let [index (atom 1)
         fib_seq (fibonacci-sequence)]
