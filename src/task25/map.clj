@@ -14,5 +14,4 @@
             (swap! index inc)
             (recur (rest seq))))))))
 
-
 (fib_search 25)
