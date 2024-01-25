@@ -27,7 +27,7 @@ jobs:
           lein: 2.9.1                  # Leiningen
 
       - name: clj-fmt fix
-        run: cljfmt check src
+        run: cljfmt check src test
 
       - name: linter
         run: clj-kondo --lint src test
